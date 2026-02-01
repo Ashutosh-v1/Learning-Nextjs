@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Componetspage from "./_components/page";
 
 export const metadata = {
     title: 'Welcome Home',
@@ -10,6 +11,7 @@ export default async function Home({ searchParams, params}) {
   return (
     <div>
       <h1> Welcome to Home </h1>
+      <Componetspage/>
       <p><Link href="/about">About</Link></p>  
       {/* learned to create routes, created about route and linked it to the main home page */}
       <p><Link href="/services">Services</Link></p>
