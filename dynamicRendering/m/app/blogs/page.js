@@ -1,3 +1,4 @@
+"use client";
 import Comments from "@/components/Comments";
 import Likes from "@/components/Likes";
 import Views from "@/components/Views";
@@ -34,7 +35,14 @@ const Blogs = () => {
       </nav>
       <div>
         <h1>Welcome to Our Blog</h1>
-        <ol className="blog-links">
+        <button
+          onClick={() => {
+            console.log("butt clicked properly");
+          }}
+        >
+          Click here
+        </button>
+        {/* <ol className="blog-links">
           <li>
             <Link href="/blogs/1">Blog 1</Link>
           </li>
@@ -44,18 +52,20 @@ const Blogs = () => {
           <li>
             <Link href="/blogs/3">Blog 3</Link>
           </li>
-        </ol>
+        </ol> */}
         <div className="blog-links">
           <br />
-          <Suspense fallback="Loading Views..">
+          {/* <Suspense fallback="Loading Views..">
             <Views />
-          </Suspense>
-          <Suspense fallback="Loading Likes..">
+          </Suspense> */}
+          {/* <Suspense fallback="Loading Likes.."> */}
             <Likes />
-          </Suspense>
-          <Suspense fallback="Loading Comments..">
             <Comments />
-          </Suspense>
+            <Views />
+          {/* </Suspense> */}
+          {/* <Suspense fallback="Loading Comments..">
+            <Comments />
+          </Suspense> */}
         </div>
       </div>
     </>
